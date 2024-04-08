@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1004</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButtonSelectImage">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>20</y>
+      <width>80</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Select Image</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelImage">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>301</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="text">
+     <string>Color Image</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelImageSize">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>30</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>Image size</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonGrayscale">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>190</y>
+      <width>80</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Glay Scale</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelGrayscaleImage">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>301</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="text">
+     <string>Glay Scale Image</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBinaryImage">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>340</y>
+      <width>301</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="text">
+     <string>Binarized Image</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonBinary">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>430</y>
+      <width>80</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Binarize</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonTrim">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>510</y>
+      <width>141</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Trimming Start</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelCroppedImage">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>500</y>
+      <width>301</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="text">
+     <string>Cropped_Image</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderThreshold">
+    <property name="geometry">
+     <rect>
+      <x>329</x>
+      <y>425</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="sliderPosition">
+     <number>128</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="invertedAppearance">
+     <bool>false</bool>
+    </property>
+    <property name="invertedControls">
+     <bool>false</bool>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBothSides</enum>
+    </property>
+    <property name="tickInterval">
+     <number>16</number>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>10</y>
+      <width>20</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonCalculateTension">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>370</y>
+      <width>91</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cal. Tension</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTensionValue">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>360</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <property name="midLineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string>Value</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTensionUnit">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>390</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>N/m</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelGrayScaledImageSize">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>200</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Image size</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelBinarizedImageSize">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>350</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Image size</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelCroppedImageSize">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>530</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Image size</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditG">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>60</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditDRho">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>180</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditRhoDrop">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>100</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditRhoAround">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>140</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonOtsuBinarize">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>350</y>
+      <width>80</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Otsu Binarize</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditPixelSize">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>20</y>
+      <width>121</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDe">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>270</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDs">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>270</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>250</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>de</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>250</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>ds</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDeUnit">
+    <property name="geometry">
+     <rect>
+      <x>780</x>
+      <y>280</y>
+      <width>49</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>m</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDsUnit">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>280</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>m</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>400</y>
+      <width>291</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>游明朝</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>※ You can also decide a threshold with the slider.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>340</y>
+      <width>181</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Surface / Interfacial Tension</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>450</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>450</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>128</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>450</y>
+      <width>20</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>255</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPixelSizeUnit">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>30</y>
+      <width>18</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>μm</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDAroundUnit">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>150</y>
+      <width>43</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>kg/m^3</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDDropUnit">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>110</y>
+      <width>43</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>kg/m^3</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDRhoUnit">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>190</y>
+      <width>43</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>kg/m^3</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelGUnit">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>70</y>
+      <width>35</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>m/s^2</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelG">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>60</y>
+      <width>22</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>g = </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelPixelSize">
+    <property name="geometry">
+     <rect>
+      <x>681</x>
+      <y>21</y>
+      <width>64</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Pixel Size = </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDAround">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>140</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ρ_around = </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDDrop">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>100</y>
+      <width>53</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ρ_drop = </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDRho">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>180</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Δρ = </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelDeDsDiagram">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>450</y>
+      <width>321</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1004</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

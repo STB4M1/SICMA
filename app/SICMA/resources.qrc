@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icon/sicma.ico</file>
+        <file>icon/sicma_black.ico</file>
+    </qresource>
+</RCC>

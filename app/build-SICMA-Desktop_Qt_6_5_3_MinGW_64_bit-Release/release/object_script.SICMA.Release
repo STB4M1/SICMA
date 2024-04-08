@@ -1,0 +1,10 @@
+release/main.o
+release/mainwindow.o
+release/overlaywidget.o
+release/tensioncalculator.o
+release/trimmingwindow.o
+release/qrc_resources.o
+release/qrc_qmake_qmake_qm_files.o
+release/moc_mainwindow.o
+release/moc_overlaywidget.o
+release/moc_trimmingwindow.o
