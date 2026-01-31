@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icon/sicma.ico</file>
+        <file>icon/sicma_black.ico</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>data/fordham_invH_wide.dat</file>
+        <file>data/misak_invH_constants.dat</file>
+        <file>data/stauffer_invH_wide.dat</file>
+    </qresource>
+</RCC>

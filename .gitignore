@@ -1,0 +1,79 @@
+@"
+# ===== Qt / Qt Creator =====
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.qmlproject.user
+*.qmlproject.user.*
+*.creator.user
+*.creator.user.*
+*.autosave
+
+# Qt Creator local settings dirs (may appear depending on version)
+.qtc_clangd/
+.qtcreator/
+
+# Qt generated
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+
+# ===== Build directories =====
+build*/
+Build*/
+*_build*/
+out/
+bin/
+obj/
+
+# Also ignore your in-project build folder explicitly
+app/SICMA/build/
+app/SICMA/build*/
+
+# ===== CMake (if used) =====
+CMakeCache.txt
+CMakeFiles/
+cmake-build-*/
+CMakeScripts/
+Testing/
+CTestTestfile.cmake
+install_manifest.txt
+compile_commands.json
+Makefile
+*.ninja
+*.ninja_deps
+*.ninja_log
+
+# ===== C++ artifacts =====
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+*.pdb
+*.ilk
+*.pch
+
+# ===== IDE / tooling =====
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.VC.db
+*.VC.VC.opendb
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ===== Logs =====
+*.log
+"@ | Out-File -Encoding utf8 .gitignore
